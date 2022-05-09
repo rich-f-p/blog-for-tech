@@ -12,7 +12,7 @@ if (username && password) {
     });
   
     if (response.ok) {
-    document.location.replace('/dashboard');
+    document.location.replace('user/dashboard');
     console.log('ok')
     } else {
     alert('err');
