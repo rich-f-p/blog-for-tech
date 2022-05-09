@@ -11,9 +11,7 @@ Comment.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        blog_name:{
 
-        },
         comment:{
             type: DataTypes.STRING,
             allowNull: false
