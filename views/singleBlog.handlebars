@@ -16,8 +16,8 @@
 </div>
 {{#each blogs.comments as |comm|}}
 <div class="container-fluid justify-content-center col-9">
-    <h5 class="bg-dark text-white p-1 text-wrap">{{comm.user_id}}</h4>
-    <p class="text-center text-wrap">user ID: {{comm.comment}}</p>
+    <h5 class="bg-dark text-white p-1 text-wrap">User ID: {{comm.user_id}}</h4>
+    <p class="text-center text-wrap">{{comm.comment}}</p>
     <p>{{format_date comm.date_comment}}</p>
 </div>
 {{/each}}
