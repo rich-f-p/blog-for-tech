@@ -1,5 +1,6 @@
 
-async function signup() {
+async function signup(event) {
+    event.preventDefault();
     const username = document.querySelector('#username-custom').value.trim();
     const password = document.querySelector('#password-custom').value.trim();
 
