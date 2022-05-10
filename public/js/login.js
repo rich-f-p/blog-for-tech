@@ -1,6 +1,6 @@
 async function submitlogin(event){
 event.preventDefault();
-  
+  //checks login information
 const username = document.querySelector('#username-custom').value.trim();
 const password = document.querySelector('#password-custom').value.trim();
   

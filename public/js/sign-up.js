@@ -1,4 +1,4 @@
-
+// function to signup / post user information to database
 async function signup(event) {
     event.preventDefault();
     const username = document.querySelector('#username-custom').value.trim();

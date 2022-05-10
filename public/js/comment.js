@@ -1,5 +1,5 @@
 
-
+// function to show hidden content
 async function showComment(event){
     event.preventDefault();
     let info = event.target;
@@ -12,7 +12,7 @@ async function showComment(event){
         form.style.display = "none";
     }
 }
-
+// function to add comments
 async function addComment(event){
     event.preventDefault();
     let info = await event.target;
@@ -31,7 +31,7 @@ async function addComment(event){
         alert('error posting, please try again later')
     }
 }
-
+// function to delete comments
 const deleteComment = async (event) => {
     const id = event.target.getAttribute('data-id');
     const response = await fetch(`/api/comments/${id}`, {

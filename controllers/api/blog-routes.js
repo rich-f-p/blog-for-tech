@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Blog, User } = require('../../model');
 const userAuth = require('../../utils/user-auth');
-
+//get all blogs
 router.get('/', async (req, res) => {
     try {
         const blogData = await Blog.findAll({
@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
         res.status(500).json(err);
     }
 });
-
+//post a blog
 router.post('/' , userAuth ,async (req,res) => {
     try {
         const createBlog = await Blog.create({
@@ -29,7 +29,7 @@ router.post('/' , userAuth ,async (req,res) => {
         res.status(400).json(err);
     }
 })
-
+//update a blog
 router.put('/:id' , userAuth ,async (req,res) => {
     try {
         const updateBlog = Blog.update(req.body, {
