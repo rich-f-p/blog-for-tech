@@ -1,0 +1,25 @@
+<div class="container-fluid justify-content-center border col-10">
+    <h2 class="bg-dark text-white p-1 text-wrap">{{blogs.title}}</h2>
+    <h3 class="text-center text-wrap">{{blogs.description}}</h3>
+    <p>- {{blogs.user.name}}</p>
+    <p>{{format_time blogs.date}}</p>
+</div>
+<div>
+<button id="addComment" class="btn btn-dark" data="{{blogs.id}}">Add Comment</button>
+<form id="commentForm" style="display: none;">
+    <div class="form-group">
+        <label for="edit">comment</label>
+        <textarea class="form-control" id="commentText" rows="5"></textarea>
+    </div>
+    <button id="submitComment" type="submit" class="btn btn-dark" data="{{blogs.id}}">Submit</button>
+  </form>
+</div>
+{{#each blogs.comments as |comm|}}
+<div class="container-fluid justify-content-center col-9">
+    <h4 class="bg-dark text-white p-1 text-wrap">{{comm.username}}</h4>
+    <p class="text-center text-wrap">{{comm.comment}}</p>
+    <p>{{format_date comm.date_comment}}</p>
+</div>
+{{/each}}
+
+<script src="/js/comment.js"></script>

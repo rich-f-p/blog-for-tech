@@ -18,7 +18,8 @@ Comment.init(
         },
         username:{
             type: DataTypes.STRING,
-            allowNull:false,
+            allowNull:false, 
+            defaultValue: 'anonymous'
         },
         date_comment:{
             type: DataTypes.DATE,
