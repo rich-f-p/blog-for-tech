@@ -1,0 +1,32 @@
+<h2 class="text-center">{{userData.name}}'s Dashboard</h2>
+<div class="container-fluid m-2">
+    <h3 >Create Blog</h3>
+    <form>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Title</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Title">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Description</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+    </form>
+</div>
+
+{{#each userData.blogs}}
+<div class="card container-fluid m-2">
+    <a href="/blogs/{{id}}">
+        <div class="card-header d-flex inline justify-content-between bg-dark text-white">
+            <h4>{{title}}</h4>
+            <h4>{{format_date date}}</h4>
+        </div>
+    </a>
+  <div class="card-body">
+    <p class="card-text">{{description}}</p>
+    <button class="btn btn-dark">Edit</button>
+    <button class="btn btn-dark">Delete</button>
+  </div>
+</div>
+{{/each}}
+
+<script src="/js/dashboard.js"></script>
