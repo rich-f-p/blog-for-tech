@@ -32,14 +32,17 @@ async function addComment(event){
     }
 }
 
-
-// async function getBlogId(event){
-//     event.preventDefault();
-//     let info = await event.target;
-//     const id = await info.getAttribute('data');
-//     const text = await event.target.parentNode.querySelector('#commentText').value.trim()
-//     addComment(id,text);
-// }
+const deleteComment = async (event) => {
+    const id = event.target.getAttribute('data-id');
+    const response = await fetch(`/api/comments/${id}`, {
+        method: 'DELETE',
+    });
+    if (response.ok) {
+        document.location.reload();
+    } else {
+        alert('error didnt delete blog.');
+    }
+    };
 
 document.querySelector('#submitComment').addEventListener('click', addComment)
 document.querySelector('#addComment').addEventListener('click', showComment)
