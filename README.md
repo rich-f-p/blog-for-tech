@@ -33,6 +33,8 @@ The following will be a guide that can assist you to download and start the appl
 Test can be performed in Insomnia, or similar API software. 
 ## License
 [License: MIT](https://opensource.org/licenses/MIT) : click to learn more!
+## Live site
+* [click to view](https://young-woodland-61260.herokuapp.com/)
 ## Technologies
 - Sequelize
 - MySQL2
